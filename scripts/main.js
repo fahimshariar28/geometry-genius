@@ -34,42 +34,6 @@ document.getElementById("rectangle-btn").addEventListener("click", function () {
   }
 });
 
-// Rectangle Area Calculation
-
-document
-  .getElementById("parallelogram-btn")
-  .addEventListener("click", function () {
-    serial += 1;
-    const name = "Parallelogram";
-    const parallelogramB = getFieldValue("parallelogram-b");
-    const parallelogramH = getFieldValue("parallelogram-h");
-    if (isNaN(parallelogramB) || isNaN(parallelogramH)) {
-      alert("Please Enter a Number");
-    } else if (parallelogramB < 0 || parallelogramH < 0) {
-      alert("Please enter a Positive Number");
-    } else {
-      parallelogramArea = parallelogramB * parallelogramH;
-      displayData(name, parallelogramArea);
-    }
-  });
-
-// Rhombus Area Calculation
-
-document.getElementById("rhombus-btn").addEventListener("click", function () {
-  serial += 1;
-  const name = "Rhombus";
-  const RhombusH1 = getFieldValue("rhombus-h-1");
-  const RhombusH2 = getFieldValue("rhombus-h-1");
-  if (isNaN(RhombusH1) || isNaN(RhombusH2)) {
-    alert("Please Enter a Number");
-  } else if (RhombusH1 < 0 || RhombusH2 < 0) {
-    alert("Please enter a Positive Number");
-  } else {
-    rhombusArea = 0.5 * RhombusH1 * RhombusH2;
-    displayData(name, rhombusArea);
-  }
-});
-
 // Get Field Value By Id
 function getFieldValue(id) {
   const fieldValueById = document.getElementById(id);
