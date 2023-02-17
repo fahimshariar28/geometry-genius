@@ -70,6 +70,23 @@ document.getElementById("rhombus-btn").addEventListener("click", function () {
   }
 });
 
+// Pentagon Area Calculation
+
+document.getElementById("pentagon-btn").addEventListener("click", function () {
+  serial += 1;
+  const name = "Pentagon";
+  const pentagonP = getFieldValue("pentagon-p");
+  const pentagonB = getFieldValue("pentagon-b");
+  if (isNaN(pentagonP) || isNaN(pentagonB)) {
+    alert("Please Enter a Number");
+  } else if (pentagonP < 0 || pentagonB < 0) {
+    alert("Please enter a Positive Number");
+  } else {
+    pentagonArea = 0.5 * pentagonP * pentagonB;
+    displayData(name, pentagonArea);
+  }
+});
+
 // Get Field Value By Id
 function getFieldValue(id) {
   const fieldValueById = document.getElementById(id);
