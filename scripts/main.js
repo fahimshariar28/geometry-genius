@@ -3,7 +3,6 @@ let serial = 0;
 // Triangle Area Calculation
 
 document.getElementById("triangle-btn").addEventListener("click", function () {
-  serial += 1;
   const name = "Triangle";
   const triangleB = getFieldValue("triangle-b");
   const triangleH = getFieldValue("triangle-h");
@@ -12,6 +11,7 @@ document.getElementById("triangle-btn").addEventListener("click", function () {
   } else if (triangleB < 0 || triangleH < 0) {
     alert("Please enter a Positive Number");
   } else {
+    serial += 1;
     triangleArea = 0.5 * triangleB * triangleH;
     displayData(name, triangleArea);
   }
@@ -20,7 +20,6 @@ document.getElementById("triangle-btn").addEventListener("click", function () {
 // Rectangle Area Calculation
 
 document.getElementById("rectangle-btn").addEventListener("click", function () {
-  serial += 1;
   const name = "Rectangle";
   const rectangleW = getFieldValue("rectangle-w");
   const rectangleL = getFieldValue("rectangle-l");
@@ -29,6 +28,7 @@ document.getElementById("rectangle-btn").addEventListener("click", function () {
   } else if (rectangleW < 0 || rectangleL < 0) {
     alert("Please enter a Positive Number");
   } else {
+    serial += 1;
     rectangleArea = rectangleW * rectangleL;
     displayData(name, rectangleArea);
   }
@@ -39,7 +39,6 @@ document.getElementById("rectangle-btn").addEventListener("click", function () {
 document
   .getElementById("parallelogram-btn")
   .addEventListener("click", function () {
-    serial += 1;
     const name = "Parallelogram";
     const parallelogramB = getFieldValue("parallelogram-b");
     const parallelogramH = getFieldValue("parallelogram-h");
@@ -48,6 +47,7 @@ document
     } else if (parallelogramB < 0 || parallelogramH < 0) {
       alert("Please enter a Positive Number");
     } else {
+      serial += 1;
       parallelogramArea = parallelogramB * parallelogramH;
       displayData(name, parallelogramArea);
     }
@@ -56,7 +56,6 @@ document
 // Rhombus Area Calculation
 
 document.getElementById("rhombus-btn").addEventListener("click", function () {
-  serial += 1;
   const name = "Rhombus";
   const rhombusH1 = getFieldValue("rhombus-h-1");
   const rhombusH2 = getFieldValue("rhombus-h-1");
@@ -65,6 +64,7 @@ document.getElementById("rhombus-btn").addEventListener("click", function () {
   } else if (rhombusH1 < 0 || rhombusH2 < 0) {
     alert("Please enter a Positive Number");
   } else {
+    serial += 1;
     rhombusArea = 0.5 * rhombusH1 * rhombusH2;
     displayData(name, rhombusArea);
   }
@@ -73,7 +73,6 @@ document.getElementById("rhombus-btn").addEventListener("click", function () {
 // Pentagon Area Calculation
 
 document.getElementById("pentagon-btn").addEventListener("click", function () {
-  serial += 1;
   const name = "Pentagon";
   const pentagonP = getFieldValue("pentagon-p");
   const pentagonB = getFieldValue("pentagon-b");
@@ -82,6 +81,7 @@ document.getElementById("pentagon-btn").addEventListener("click", function () {
   } else if (pentagonP < 0 || pentagonB < 0) {
     alert("Please enter a Positive Number");
   } else {
+    serial += 1;
     pentagonArea = 0.5 * pentagonP * pentagonB;
     displayData(name, pentagonArea);
   }
@@ -90,7 +90,6 @@ document.getElementById("pentagon-btn").addEventListener("click", function () {
 // Ellipse Area Calculation
 
 document.getElementById("ellipse-btn").addEventListener("click", function () {
-  serial += 1;
   const name = "Ellipse";
   const ellipseA = getFieldValue("ellipse-a");
   const ellipseB = getFieldValue("ellipse-b");
@@ -99,6 +98,7 @@ document.getElementById("ellipse-btn").addEventListener("click", function () {
   } else if (ellipseA < 0 || ellipseB < 0) {
     alert("Please enter a Positive Number");
   } else {
+    serial += 1;
     ellipseArea = 3.1416 * ellipseA * ellipseB;
     displayData(name, ellipseArea);
   }
