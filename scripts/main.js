@@ -58,14 +58,14 @@ document
 document.getElementById("rhombus-btn").addEventListener("click", function () {
   serial += 1;
   const name = "Rhombus";
-  const RhombusH1 = getFieldValue("rhombus-h-1");
-  const RhombusH2 = getFieldValue("rhombus-h-1");
-  if (isNaN(RhombusH1) || isNaN(RhombusH2)) {
+  const rhombusH1 = getFieldValue("rhombus-h-1");
+  const rhombusH2 = getFieldValue("rhombus-h-1");
+  if (isNaN(rhombusH1) || isNaN(rhombusH2)) {
     alert("Please Enter a Number");
-  } else if (RhombusH1 < 0 || RhombusH2 < 0) {
+  } else if (rhombusH1 < 0 || rhombusH2 < 0) {
     alert("Please enter a Positive Number");
   } else {
-    rhombusArea = 0.5 * RhombusH1 * RhombusH2;
+    rhombusArea = 0.5 * rhombusH1 * rhombusH2;
     displayData(name, rhombusArea);
   }
 });
