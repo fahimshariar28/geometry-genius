@@ -188,7 +188,7 @@ function getColor(e) {
 
 const table = document.querySelector("table");
 function onDeleteRow(e) {
-  if (!e.target.classList.contains("deleteBtn")) {
+  if (e.target.classList.contains("deleteBtn")) {
     return;
   }
 
@@ -196,3 +196,9 @@ function onDeleteRow(e) {
   btn.closest("tr").remove();
 }
 table.addEventListener("click", onDeleteRow);
+
+// Change Page with Button
+
+document.getElementById("blog-btn").addEventListener("click", function () {
+  window.location.href = "blog.html";
+});
