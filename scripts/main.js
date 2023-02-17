@@ -34,6 +34,27 @@ document.getElementById("rectangle-btn").addEventListener("click", function () {
   }
 });
 
+// Parallelogram Area Calculation
+
+document
+  .getElementById("parallelogram-btn")
+  .addEventListener("click", function () {
+    serial += 1;
+    const name = "Parallelogram";
+    const parallelogramB = getFieldValue("parallelogram-b");
+    const parallelogramH = getFieldValue("parallelogram-h");
+    if (isNaN(parallelogramB) || isNaN(parallelogramH)) {
+      alert("Please Enter a Number");
+    } else if (parallelogramB < 0 || parallelogramH < 0) {
+      alert("Please enter a Positive Number");
+    } else {
+      parallelogramArea = parallelogramB * parallelogramH;
+      displayData(name, parallelogramArea);
+    }
+  });
+
+// Rhombus Area Calculation
+
 // Get Field Value By Id
 function getFieldValue(id) {
   const fieldValueById = document.getElementById(id);
