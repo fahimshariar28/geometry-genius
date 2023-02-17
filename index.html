@@ -16,24 +16,6 @@
     <header>
       <div class="navbar bg-base-100 px-10 mt-2 bg-sky-300">
         <div class="navbar-start">
-          <div class="dropdown">
-            <label tabindex="0" class="btn btn-ghost lg:hidden">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                class="h-5 w-5"
-                fill="none"
-                viewBox="0 0 24 24"
-                stroke="currentColor"
-              >
-                <path
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  stroke-width="2"
-                  d="M4 6h16M4 12h8m-8 6h16"
-                />
-              </svg>
-            </label>
-          </div>
           <a class="btn btn-ghost normal-case text-2xl">Geometry Genius</a>
           <p></p>
         </div>
@@ -45,13 +27,16 @@
     <main class="px-10">
       <div class="flex flex-col md:flex-row lg:flex-row gap-5">
         <div
-          class="w-full md:w-[60%] lg:w-[60%] mt-5 grid md:grid-cols-2 lg:grid-cols-3 gap-5"
+          class="w-full md:w-[70%] lg:w-[60%] mt-5 grid md:grid-cols-2 lg:grid-cols-3 gap-5"
         >
           <!-- Triangle Card -->
 
-          <div class="card bg-base-100 shadow-xl text-center mt-5">
+          <div
+            id="triangle-section"
+            class="card bg-base-100 shadow-xl text-center mt-5"
+          >
             <figure class="p-3">
-              <img class="mt-1" src="./images/Triangle.png" alt="Triangle" />
+              <img class="mt-1" src="./images/triangle.png" alt="Triangle" />
             </figure>
             <div class="card-body">
               <h2 class="card-title text-center">Triangle</h2>
@@ -59,14 +44,14 @@
               <div class="card-actions justify-end">
                 <input
                   id="triangle-b"
-                  class="p-2 rounded bg-slate-300 inline"
+                  class="p-2 rounded bg-slate-300 inline w-10"
                   type="text"
                   placeholder="b"
                 />
                 <p class="inline">cm</p>
                 <input
                   id="triangle-h"
-                  class="p-2 rounded bg-slate-300 inline"
+                  class="p-2 rounded bg-slate-300 inline w-10"
                   type="text"
                   placeholder="h"
                 />
@@ -82,9 +67,12 @@
 
           <!-- Rectangle Card -->
 
-          <div class="card bg-base-100 shadow-xl text-center mt-5">
+          <div
+            id="rectangle-section"
+            class="card bg-base-100 shadow-xl text-center mt-5"
+          >
             <figure class="p-3">
-              <img class="mt-1" src="./images/Rectangle.png" alt="Rectangle" />
+              <img class="mt-1" src="./images/rectangle.png" alt="Rectangle" />
             </figure>
             <div class="card-body">
               <h2 class="card-title text-center">Rectangle</h2>
@@ -92,14 +80,14 @@
               <div class="card-actions justify-end">
                 <input
                   id="rectangle-w"
-                  class="p-2 rounded bg-slate-300"
+                  class="p-2 rounded bg-slate-300 w-10"
                   type="text"
                   placeholder="w"
                 />
                 <p>cm</p>
                 <input
                   id="rectangle-l"
-                  class="p-2 rounded bg-slate-300"
+                  class="p-2 rounded bg-slate-300 w-10"
                   type="text"
                   placeholder="l"
                 />
@@ -115,11 +103,14 @@
 
           <!-- Parallelogram Card -->
 
-          <div class="card bg-base-100 shadow-xl text-center mt-5">
+          <div
+            id="parallelogram-section"
+            class="card bg-base-100 shadow-xl text-center mt-5"
+          >
             <figure class="p-3">
               <img
                 class="mt-1"
-                src="./images/Parallelogram.png"
+                src="./images/parallelogram.png"
                 alt="Parallelogram"
               />
             </figure>
@@ -129,14 +120,14 @@
               <div class="card-actions justify-end">
                 <input
                   id="parallelogram-b"
-                  class="p-2 rounded bg-slate-300"
+                  class="p-2 rounded bg-slate-300 w-10"
                   type="text"
                   placeholder="b"
                 />
                 <p>cm</p>
                 <input
                   id="parallelogram-h"
-                  class="p-2 rounded bg-slate-300"
+                  class="p-2 rounded bg-slate-300 w-10"
                   type="text"
                   placeholder="h"
                 />
@@ -152,9 +143,12 @@
 
           <!-- Rhombus Card -->
 
-          <div class="card bg-base-100 shadow-xl text-center mt-5">
+          <div
+            id="rhombus-section"
+            class="card bg-base-100 shadow-xl text-center mt-5"
+          >
             <figure class="p-3">
-              <img class="mt-1" src="./images/Rhombus.png" alt="Rhombus" />
+              <img class="mt-1" src="./images/rhombus.png" alt="Rhombus" />
             </figure>
             <div class="card-body">
               <h2 class="card-title text-center">Rhombus</h2>
@@ -162,14 +156,14 @@
               <div class="card-actions justify-end">
                 <input
                   id="rhombus-h-1"
-                  class="p-2 rounded bg-slate-300"
+                  class="p-2 rounded bg-slate-300 w-10"
                   type="text"
                   placeholder="d1"
                 />
                 <p>cm</p>
                 <input
                   id="rhombus-h-2"
-                  class="p-2 rounded bg-slate-300"
+                  class="p-2 rounded bg-slate-300 w-10"
                   type="text"
                   placeholder="d2"
                 />
@@ -185,9 +179,12 @@
 
           <!-- Pentagon Card -->
 
-          <div class="card bg-base-100 shadow-xl text-center mt-5">
+          <div
+            id="pentagon-section"
+            class="card bg-base-100 shadow-xl text-center mt-5"
+          >
             <figure class="p-3">
-              <img class="mt-1" src="./images/Pentagon.png" alt="Pentagon" />
+              <img class="mt-1" src="./images/pentagon.png" alt="Pentagon" />
             </figure>
             <div class="card-body">
               <h2 class="card-title text-center">Pentagon</h2>
@@ -195,14 +192,14 @@
               <div class="card-actions justify-end">
                 <input
                   id="pentagon-p"
-                  class="p-2 rounded bg-slate-300"
+                  class="p-2 rounded bg-slate-300 w-10"
                   type="text"
                   placeholder="p"
                 />
                 <p>cm</p>
                 <input
                   id="pentagon-b"
-                  class="p-2 rounded bg-slate-300"
+                  class="p-2 rounded bg-slate-300 w-10"
                   type="text"
                   placeholder="b"
                 />
@@ -218,9 +215,12 @@
 
           <!-- Ellipse Card -->
 
-          <div class="card bg-base-100 shadow-xl text-center mt-5">
+          <div
+            id="ellipse-section"
+            class="card bg-base-100 shadow-xl text-center mt-5"
+          >
             <figure class="p-3">
-              <img class="mt-1" src="./images/Ellipse.png" alt="Ellipse" />
+              <img class="mt-1" src="./images/ellipse.png" alt="Ellipse" />
             </figure>
             <div class="card-body">
               <h2 class="card-title text-center">Ellipse</h2>
@@ -228,14 +228,14 @@
               <div class="card-actions justify-end">
                 <input
                   id="ellipse-a"
-                  class="p-2 rounded bg-slate-300"
+                  class="p-2 rounded bg-slate-300 w-10"
                   type="text"
                   placeholder="a"
                 />
                 <p>cm</p>
                 <input
                   id="ellipse-b"
-                  class="p-2 rounded bg-slate-300"
+                  class="p-2 rounded bg-slate-300 w-10"
                   type="text"
                   placeholder="b"
                 />
@@ -252,7 +252,7 @@
 
         <!-- Table Area -->
 
-        <div class="w-[35%]">
+        <div class="w-[25%] mt-5">
           <div class="">
             <h2 class="text-2xl text-center underline font-bold">
               Area Calculation

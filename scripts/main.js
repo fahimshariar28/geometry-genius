@@ -17,6 +17,14 @@ document.getElementById("triangle-btn").addEventListener("click", function () {
   }
 });
 
+// Triangle Section Random Color
+
+document
+  .getElementById("triangle-section")
+  .addEventListener("mouseenter", function () {
+    getColor("triangle-section");
+  });
+
 // Rectangle Area Calculation
 
 document.getElementById("rectangle-btn").addEventListener("click", function () {
@@ -33,6 +41,14 @@ document.getElementById("rectangle-btn").addEventListener("click", function () {
     displayData(name, rectangleArea);
   }
 });
+
+// Rectangle Section Random Color
+
+document
+  .getElementById("rectangle-section")
+  .addEventListener("mouseenter", function () {
+    getColor("rectangle-section");
+  });
 
 // Parallelogram Area Calculation
 
@@ -53,6 +69,14 @@ document
     }
   });
 
+// Parallelogram Section Random Color
+
+document
+  .getElementById("parallelogram-section")
+  .addEventListener("mouseenter", function () {
+    getColor("parallelogram-section");
+  });
+
 // Rhombus Area Calculation
 
 document.getElementById("rhombus-btn").addEventListener("click", function () {
@@ -69,6 +93,14 @@ document.getElementById("rhombus-btn").addEventListener("click", function () {
     displayData(name, rhombusArea);
   }
 });
+
+// Rhombus Section Random Color
+
+document
+  .getElementById("rhombus-section")
+  .addEventListener("mouseenter", function () {
+    getColor("rhombus-section");
+  });
 
 // Pentagon Area Calculation
 
@@ -87,6 +119,14 @@ document.getElementById("pentagon-btn").addEventListener("click", function () {
   }
 });
 
+// Pentagon Section Random Color
+
+document
+  .getElementById("pentagon-section")
+  .addEventListener("mouseenter", function () {
+    getColor("pentagon-section");
+  });
+
 // Ellipse Area Calculation
 
 document.getElementById("ellipse-btn").addEventListener("click", function () {
@@ -103,6 +143,14 @@ document.getElementById("ellipse-btn").addEventListener("click", function () {
     displayData(name, ellipseArea);
   }
 });
+
+// Ellipse Section Random Color
+
+document
+  .getElementById("ellipse-section")
+  .addEventListener("mouseenter", function () {
+    getColor("ellipse-section");
+  });
 
 // Get Field Value By Id
 function getFieldValue(id) {
@@ -122,6 +170,29 @@ function displayData(name, result) {
    <td>
     <button class="btn btn-sm btn-red-500">Convert to m<sup>2</sup></button>
     </td>
+    <td>
+    <button class="deleteBtn btn btn-sm btn-red-500">Remove</button>
+    </td>
   `;
   container.appendChild(tr);
 }
+
+// Random backgroundColor Generator
+function getColor(e) {
+  const randomNumber = Math.floor(Math.random() * 16777245);
+  const randomCode = "#" + randomNumber.toString(16);
+  document.getElementById(e).style.backgroundColor = randomCode;
+}
+
+// Remove Button
+
+const table = document.querySelector("table");
+function onDeleteRow(e) {
+  if (!e.target.classList.contains("deleteBtn")) {
+    return;
+  }
+
+  const btn = e.target;
+  btn.closest("tr").remove();
+}
+table.addEventListener("click", onDeleteRow);
