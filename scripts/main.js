@@ -87,6 +87,23 @@ document.getElementById("pentagon-btn").addEventListener("click", function () {
   }
 });
 
+// Ellipse Area Calculation
+
+document.getElementById("ellipse-btn").addEventListener("click", function () {
+  serial += 1;
+  const name = "Ellipse";
+  const ellipseA = getFieldValue("ellipse-a");
+  const ellipseB = getFieldValue("ellipse-b");
+  if (isNaN(ellipseA) || isNaN(ellipseB)) {
+    alert("Please Enter a Number");
+  } else if (ellipseA < 0 || ellipseB < 0) {
+    alert("Please enter a Positive Number");
+  } else {
+    ellipseArea = 3.1416 * ellipseA * ellipseB;
+    displayData(name, ellipseArea);
+  }
+});
+
 // Get Field Value By Id
 function getFieldValue(id) {
   const fieldValueById = document.getElementById(id);
