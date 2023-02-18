@@ -12,7 +12,8 @@ document.getElementById("triangle-btn").addEventListener("click", function () {
     alert("Please enter a Positive Number");
   } else {
     serial += 1;
-    triangleArea = 0.5 * triangleB * triangleH;
+    const triangleAreaCal = 0.5 * triangleB * triangleH;
+    const triangleArea = triangleAreaCal.toFixed(2);
     displayData(name, triangleArea);
     const triangleDisplayValue = document.getElementById(
       "triangle-value-display"
@@ -28,6 +29,7 @@ document.getElementById("triangle-btn").addEventListener("click", function () {
 
 document.getElementById("triangle-edit").addEventListener("click", function () {
   showSectionById("triangle-input");
+  hideSectionById("triangle-value-display");
 });
 
 // Triangle Section Random Color
@@ -50,7 +52,8 @@ document.getElementById("rectangle-btn").addEventListener("click", function () {
     alert("Please enter a Positive Number");
   } else {
     serial += 1;
-    rectangleArea = rectangleW * rectangleL;
+    const rectangleAreaCal = rectangleW * rectangleL;
+    const rectangleArea = rectangleAreaCal.toFixed(2);
     displayData(name, rectangleArea);
     const rectangleDisplayValue = document.getElementById(
       "rectangle-value-display"
@@ -76,6 +79,7 @@ document
   .getElementById("rectangle-edit")
   .addEventListener("click", function () {
     showSectionById("rectangle-input");
+    hideSectionById("rectangle-value-display");
   });
 
 // Parallelogram Area Calculation
@@ -92,7 +96,8 @@ document
       alert("Please enter a Positive Number");
     } else {
       serial += 1;
-      parallelogramArea = parallelogramB * parallelogramH;
+      const parallelogramAreaCal = parallelogramB * parallelogramH;
+      const parallelogramArea = parallelogramAreaCal.toFixed(2);
       displayData(name, parallelogramArea);
       const parallelogramDisplayValue = document.getElementById(
         "parallelogram-value-display"
@@ -118,6 +123,7 @@ document
   .getElementById("parallelogram-edit")
   .addEventListener("click", function () {
     showSectionById("parallelogram-input");
+    hideSectionById("parallelogram-value-display");
   });
 
 // Rhombus Area Calculation
@@ -132,7 +138,8 @@ document.getElementById("rhombus-btn").addEventListener("click", function () {
     alert("Please enter a Positive Number");
   } else {
     serial += 1;
-    rhombusArea = 0.5 * rhombusH1 * rhombusH2;
+    const rhombusAreaCal = 0.5 * rhombusH1 * rhombusH2;
+    const rhombusArea = rhombusAreaCal.toFixed(2);
     displayData(name, rhombusArea);
     const parallelogramDisplayValue = document.getElementById(
       "rhombus-value-display"
@@ -156,6 +163,7 @@ document
 
 document.getElementById("rhombus-edit").addEventListener("click", function () {
   showSectionById("rhombus-input");
+  hideSectionById("rhombus-value-display");
 });
 
 // Pentagon Area Calculation
@@ -170,7 +178,8 @@ document.getElementById("pentagon-btn").addEventListener("click", function () {
     alert("Please enter a Positive Number");
   } else {
     serial += 1;
-    pentagonArea = 0.5 * pentagonP * pentagonB;
+    const pentagonAreaCal = 0.5 * pentagonP * pentagonB;
+    const pentagonArea = pentagonAreaCal.toFixed(2);
     displayData(name, pentagonArea);
     const parallelogramDisplayValue = document.getElementById(
       "pentagon-value-display"
@@ -194,6 +203,7 @@ document
 
 document.getElementById("pentagon-edit").addEventListener("click", function () {
   showSectionById("pentagon-input");
+  hideSectionById("pentagon-value-display");
 });
 
 // Ellipse Area Calculation
@@ -208,7 +218,8 @@ document.getElementById("ellipse-btn").addEventListener("click", function () {
     alert("Please enter a Positive Number");
   } else {
     serial += 1;
-    ellipseArea = 3.1416 * ellipseA * ellipseB;
+    const ellipseAreaCal = 3.1416 * ellipseA * ellipseB;
+    const ellipseArea = ellipseAreaCal.toFixed(2);
     displayData(name, ellipseArea);
     const ellipseDisplayValue = document.getElementById(
       "ellipse-value-display"
@@ -232,6 +243,7 @@ document
 
 document.getElementById("ellipse-edit").addEventListener("click", function () {
   showSectionById("ellipse-input");
+  hideSectionById("ellipse-value-display");
 });
 
 // Get Field Value By Id
