@@ -24,6 +24,12 @@ document.getElementById("triangle-btn").addEventListener("click", function () {
   }
 });
 
+// Triangle Input Section Show
+
+document.getElementById("triangle-edit").addEventListener("click", function () {
+  showSectionById("triangle-input");
+});
+
 // Triangle Section Random Color
 
 document
@@ -64,6 +70,14 @@ document
     getColor("rectangle-section");
   });
 
+// Rectangle Input Section Show
+
+document
+  .getElementById("rectangle-edit")
+  .addEventListener("click", function () {
+    showSectionById("rectangle-input");
+  });
+
 // Parallelogram Area Calculation
 
 document
@@ -98,6 +112,14 @@ document
     getColor("parallelogram-section");
   });
 
+// Parallelogram Input Section Show
+
+document
+  .getElementById("parallelogram-edit")
+  .addEventListener("click", function () {
+    showSectionById("parallelogram-input");
+  });
+
 // Rhombus Area Calculation
 
 document.getElementById("rhombus-btn").addEventListener("click", function () {
@@ -129,6 +151,12 @@ document
   .addEventListener("mouseenter", function () {
     getColor("rhombus-section");
   });
+
+// Rhombus Input Section Show
+
+document.getElementById("rhombus-edit").addEventListener("click", function () {
+  showSectionById("rhombus-input");
+});
 
 // Pentagon Area Calculation
 
@@ -162,6 +190,12 @@ document
     getColor("pentagon-section");
   });
 
+// Pentagon Input Section Show
+
+document.getElementById("pentagon-edit").addEventListener("click", function () {
+  showSectionById("pentagon-input");
+});
+
 // Ellipse Area Calculation
 
 document.getElementById("ellipse-btn").addEventListener("click", function () {
@@ -193,6 +227,12 @@ document
   .addEventListener("mouseenter", function () {
     getColor("ellipse-section");
   });
+
+// Ellipse Input Section Show
+
+document.getElementById("ellipse-edit").addEventListener("click", function () {
+  showSectionById("ellipse-input");
+});
 
 // Get Field Value By Id
 function getFieldValue(id) {
@@ -257,4 +297,11 @@ function setInnerText(result, id) {
 function hideSectionById(id) {
   const section = document.getElementById(id);
   section.style.display = "none";
+}
+
+// Section Selector To Show
+
+function showSectionById(id) {
+  const section = document.getElementById(id);
+  section.style.display = "block";
 }
