@@ -20,6 +20,7 @@ document.getElementById("triangle-btn").addEventListener("click", function () {
     triangleDisplayValue.style.display = "block";
     setInnerText(triangleB, "display-triangle-b");
     setInnerText(triangleB, "display-triangle-h");
+    hideSectionById("triangle-input");
   }
 });
 
@@ -51,6 +52,7 @@ document.getElementById("rectangle-btn").addEventListener("click", function () {
     rectangleDisplayValue.style.display = "block";
     setInnerText(rectangleW, "display-rectangle-w");
     setInnerText(rectangleL, "display-rectangle-l");
+    hideSectionById("rectangle-input");
   }
 });
 
@@ -84,6 +86,7 @@ document
       parallelogramDisplayValue.style.display = "block";
       setInnerText(parallelogramB, "display-parallelogram-b");
       setInnerText(parallelogramH, "display-parallelogram-h");
+      hideSectionById("parallelogram-input");
     }
   });
 
@@ -115,6 +118,7 @@ document.getElementById("rhombus-btn").addEventListener("click", function () {
     parallelogramDisplayValue.style.display = "block";
     setInnerText(rhombusH1, "display-rhombus-h1");
     setInnerText(rhombusH2, "display-rhombus-h2");
+    hideSectionById("rhombus-input");
   }
 });
 
@@ -146,6 +150,7 @@ document.getElementById("pentagon-btn").addEventListener("click", function () {
     parallelogramDisplayValue.style.display = "block";
     setInnerText(pentagonP, "display-pentagon-p");
     setInnerText(pentagonB, "display-pentagon-b");
+    hideSectionById("pentagon-input");
   }
 });
 
@@ -177,6 +182,7 @@ document.getElementById("ellipse-btn").addEventListener("click", function () {
     ellipseDisplayValue.style.display = "block";
     setInnerText(ellipseA, "display-ellipse-a");
     setInnerText(ellipseB, "display-ellipse-b");
+    hideSectionById("ellipse-input");
   }
 });
 
@@ -244,4 +250,11 @@ document.getElementById("blog-btn").addEventListener("click", function () {
 function setInnerText(result, id) {
   const element = document.getElementById(id);
   element.innerText = result;
+}
+
+// Section Selector To Hide
+
+function hideSectionById(id) {
+  const section = document.getElementById(id);
+  section.style.display = "none";
 }
