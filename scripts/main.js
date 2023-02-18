@@ -14,6 +14,12 @@ document.getElementById("triangle-btn").addEventListener("click", function () {
     serial += 1;
     triangleArea = 0.5 * triangleB * triangleH;
     displayData(name, triangleArea);
+    const triangleDisplayValue = document.getElementById(
+      "triangle-value-display"
+    );
+    triangleDisplayValue.style.display = "block";
+    setInnerText(triangleB, "display-triangle-b");
+    setInnerText(triangleB, "display-triangle-h");
   }
 });
 
@@ -39,6 +45,12 @@ document.getElementById("rectangle-btn").addEventListener("click", function () {
     serial += 1;
     rectangleArea = rectangleW * rectangleL;
     displayData(name, rectangleArea);
+    const rectangleDisplayValue = document.getElementById(
+      "rectangle-value-display"
+    );
+    rectangleDisplayValue.style.display = "block";
+    setInnerText(rectangleW, "display-rectangle-w");
+    setInnerText(rectangleL, "display-rectangle-l");
   }
 });
 
@@ -66,6 +78,12 @@ document
       serial += 1;
       parallelogramArea = parallelogramB * parallelogramH;
       displayData(name, parallelogramArea);
+      const parallelogramDisplayValue = document.getElementById(
+        "parallelogram-value-display"
+      );
+      parallelogramDisplayValue.style.display = "block";
+      setInnerText(parallelogramB, "display-parallelogram-b");
+      setInnerText(parallelogramH, "display-parallelogram-h");
     }
   });
 
@@ -91,6 +109,12 @@ document.getElementById("rhombus-btn").addEventListener("click", function () {
     serial += 1;
     rhombusArea = 0.5 * rhombusH1 * rhombusH2;
     displayData(name, rhombusArea);
+    const parallelogramDisplayValue = document.getElementById(
+      "rhombus-value-display"
+    );
+    parallelogramDisplayValue.style.display = "block";
+    setInnerText(rhombusH1, "display-rhombus-h1");
+    setInnerText(rhombusH2, "display-rhombus-h2");
   }
 });
 
@@ -116,6 +140,12 @@ document.getElementById("pentagon-btn").addEventListener("click", function () {
     serial += 1;
     pentagonArea = 0.5 * pentagonP * pentagonB;
     displayData(name, pentagonArea);
+    const parallelogramDisplayValue = document.getElementById(
+      "pentagon-value-display"
+    );
+    parallelogramDisplayValue.style.display = "block";
+    setInnerText(pentagonP, "display-pentagon-p");
+    setInnerText(pentagonB, "display-pentagon-b");
   }
 });
 
@@ -141,6 +171,12 @@ document.getElementById("ellipse-btn").addEventListener("click", function () {
     serial += 1;
     ellipseArea = 3.1416 * ellipseA * ellipseB;
     displayData(name, ellipseArea);
+    const ellipseDisplayValue = document.getElementById(
+      "ellipse-value-display"
+    );
+    ellipseDisplayValue.style.display = "block";
+    setInnerText(ellipseA, "display-ellipse-a");
+    setInnerText(ellipseB, "display-ellipse-b");
   }
 });
 
@@ -166,7 +202,7 @@ function displayData(name, result) {
   tr.innerHTML = `
     <td>${serial}</td>
     <td>${name}</td>
-    <td>${result}</td>
+    <td>${result}cm<sup>2</sup></td>
    <td>
     <button class="btn btn-sm btn-red-500">Convert to m<sup>2</sup></button>
     </td>
@@ -188,7 +224,7 @@ function getColor(e) {
 
 const table = document.querySelector("table");
 function onDeleteRow(e) {
-  if (e.target.classList.contains("deleteBtn")) {
+  if (!e.target.classList.contains("deleteBtn")) {
     return;
   }
 
@@ -202,3 +238,10 @@ table.addEventListener("click", onDeleteRow);
 document.getElementById("blog-btn").addEventListener("click", function () {
   window.location.href = "blog.html";
 });
+
+// Set Text InnerText by Id
+
+function setInnerText(result, id) {
+  const element = document.getElementById(id);
+  element.innerText = result;
+}
